@@ -25,7 +25,7 @@ struct OrderM: Codable {
     var zip = ""
     
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.isEmpty || name.trim() == "" || streetAddress.isEmpty || streetAddress.trim() == "" || city.isEmpty || city.trim() == "" || zip.isEmpty || zip.trim() == "" {
             return false
         }
         return true

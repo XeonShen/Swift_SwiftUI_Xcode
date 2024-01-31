@@ -1,5 +1,9 @@
 import SwiftUI
 
 class OrderVM: ObservableObject {
-    @Published var orderM = OrderM()
+    @Published var orderM = OrderM() {
+        didSet {
+            //
+        }
+    }
 }

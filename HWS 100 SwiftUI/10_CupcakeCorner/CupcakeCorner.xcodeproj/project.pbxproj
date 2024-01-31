@@ -15,6 +15,7 @@
 		C7CAD6072B6A4D5C0083C52A /* AddressV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CAD6062B6A4D5C0083C52A /* AddressV.swift */; };
 		C7CAD6092B6A59BF0083C52A /* CheckoutV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CAD6082B6A59BF0083C52A /* CheckoutV.swift */; };
 		C7CAD60B2B6A968A0083C52A /* OrderM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CAD60A2B6A968A0083C52A /* OrderM.swift */; };
+		C7CAD6272B6AEC8D0083C52A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CAD6262B6AEC8D0083C52A /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C7CAD6062B6A4D5C0083C52A /* AddressV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressV.swift; sourceTree = "<group>"; };
 		C7CAD6082B6A59BF0083C52A /* CheckoutV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutV.swift; sourceTree = "<group>"; };
 		C7CAD60A2B6A968A0083C52A /* OrderM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderM.swift; sourceTree = "<group>"; };
+		C7CAD6262B6AEC8D0083C52A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C7CAD6062B6A4D5C0083C52A /* AddressV.swift */,
 				C7CAD6042B6A45870083C52A /* OrderVM.swift */,
 				C7CAD60A2B6A968A0083C52A /* OrderM.swift */,
+				C7CAD6262B6AEC8D0083C52A /* StringExtension.swift */,
 				C7CAD5FA2B6A45020083C52A /* Assets.xcassets */,
 				C7CAD5FC2B6A45020083C52A /* Preview Content */,
 			);
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7CAD60B2B6A968A0083C52A /* OrderM.swift in Sources */,
+				C7CAD6272B6AEC8D0083C52A /* StringExtension.swift in Sources */,
 				C7CAD6052B6A45870083C52A /* OrderVM.swift in Sources */,
 				C7CAD6072B6A4D5C0083C52A /* AddressV.swift in Sources */,
 				C7CAD6092B6A59BF0083C52A /* CheckoutV.swift in Sources */,

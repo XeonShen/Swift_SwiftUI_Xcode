@@ -5,6 +5,7 @@ struct CheckoutV: View {
     @ObservedObject var orderVM: OrderVM
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
+    @State private var showingNetworkError = false
     
 //MARK: - Function - Send request to the network
     
@@ -29,6 +30,7 @@ struct CheckoutV: View {
             showingConfirmation = true
         } catch {
             print("Check out failed: \(error.localizedDescription)")
+            showingNetworkError = true
         }
     }
     
@@ -68,8 +70,9 @@ struct CheckoutV: View {
         .navigationBarTitleDisplayMode(.inline)
         .alert("Thank you!", isPresented: $showingConfirmation) {
             Button("OK") { }
-        } message: {
-            Text(confirmationMessage)
+        } message: { Text(confirmationMessage) }
+        .alert("Network Error!", isPresented: $showingNetworkError) {
+            Button("OK") { }
         }
     }
 }
