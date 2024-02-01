@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 
 class ExpenseNote: ObservableObject {
     @Published var items = [ExpenseItem]() {
@@ -8,6 +8,7 @@ class ExpenseNote: ObservableObject {
             }
         }
     }
+    
     init() {
         if let savesItems = UserDefaults.standard.data(forKey: "Items") {
             if let decodedItems = try? JSONDecoder().decode([ExpenseItem].self, from: savesItems) {
