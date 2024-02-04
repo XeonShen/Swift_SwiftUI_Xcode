@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AddView: View {
+struct AddExpenseNoteV: View {
     
     @Environment(\.dismiss) var dismiss
     
@@ -8,7 +8,7 @@ struct AddView: View {
     @State private var type = "Personal"
     let types = ["Business", "Personal"]
     @State private var amount = 0.0
-    var expense: ExpenseNote
+    var expense: ExpenseNoteVM
     
     var body: some View {
         NavigationStack {
@@ -27,7 +27,7 @@ struct AddView: View {
             .navigationTitle("Add new expense")
             .toolbar {
                 Button("Save") {
-                    expense.items.append(ExpenseItem(name: name, type: type, amount: amount))
+                    expense.items.append(ExpenseNote(name: name, type: type, amount: amount))
                     dismiss()
                 }
             }
@@ -37,6 +37,6 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(expense: ExpenseNote())
+        AddExpenseNoteV(expense: ExpenseNoteVM())
     }
 }

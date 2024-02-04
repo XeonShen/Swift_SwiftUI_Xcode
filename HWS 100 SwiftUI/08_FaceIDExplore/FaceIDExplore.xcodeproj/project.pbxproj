@@ -11,18 +11,18 @@
 		C75543052B639421000F3EDF /* ExpenseNoteV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75543042B639421000F3EDF /* ExpenseNoteV.swift */; };
 		C75543072B639423000F3EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75543062B639423000F3EDF /* Assets.xcassets */; };
 		C755430A2B639423000F3EDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75543092B639423000F3EDF /* Preview Assets.xcassets */; };
-		C75543112B63CC76000F3EDF /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75543102B63CC76000F3EDF /* AddView.swift */; };
+		C75543112B63CC76000F3EDF /* AddExpenseNoteV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75543102B63CC76000F3EDF /* AddExpenseNoteV.swift */; };
 		C75543132B640D85000F3EDF /* ExpenseNoteM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75543122B640D85000F3EDF /* ExpenseNoteM.swift */; };
 		C75543152B640DE4000F3EDF /* ExpenseNoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75543142B640DE4000F3EDF /* ExpenseNoteVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C75542FF2B639421000F3EDF /* ExpenseNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75542FF2B639421000F3EDF /* FaceIDExplore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIDExplore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75543022B639421000F3EDF /* ExpenseNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseNoteApp.swift; sourceTree = "<group>"; };
 		C75543042B639421000F3EDF /* ExpenseNoteV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseNoteV.swift; sourceTree = "<group>"; };
 		C75543062B639423000F3EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C75543092B639423000F3EDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C75543102B63CC76000F3EDF /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		C75543102B63CC76000F3EDF /* AddExpenseNoteV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseNoteV.swift; sourceTree = "<group>"; };
 		C75543122B640D85000F3EDF /* ExpenseNoteM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseNoteM.swift; sourceTree = "<group>"; };
 		C75543142B640DE4000F3EDF /* ExpenseNoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseNoteVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,7 +41,7 @@
 		C75542F62B639421000F3EDF = {
 			isa = PBXGroup;
 			children = (
-				C75543012B639421000F3EDF /* ExpenseNote */,
+				C75543012B639421000F3EDF /* FaceIDExplore */,
 				C75543002B639421000F3EDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,23 +49,23 @@
 		C75543002B639421000F3EDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C75542FF2B639421000F3EDF /* ExpenseNote.app */,
+				C75542FF2B639421000F3EDF /* FaceIDExplore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C75543012B639421000F3EDF /* ExpenseNote */ = {
+		C75543012B639421000F3EDF /* FaceIDExplore */ = {
 			isa = PBXGroup;
 			children = (
 				C75543022B639421000F3EDF /* ExpenseNoteApp.swift */,
 				C75543042B639421000F3EDF /* ExpenseNoteV.swift */,
+				C75543102B63CC76000F3EDF /* AddExpenseNoteV.swift */,
 				C75543142B640DE4000F3EDF /* ExpenseNoteVM.swift */,
 				C75543122B640D85000F3EDF /* ExpenseNoteM.swift */,
-				C75543102B63CC76000F3EDF /* AddView.swift */,
 				C75543062B639423000F3EDF /* Assets.xcassets */,
 				C75543082B639423000F3EDF /* Preview Content */,
 			);
-			path = ExpenseNote;
+			path = FaceIDExplore;
 			sourceTree = "<group>";
 		};
 		C75543082B639423000F3EDF /* Preview Content */ = {
@@ -79,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C75542FE2B639421000F3EDF /* ExpenseNote */ = {
+		C75542FE2B639421000F3EDF /* FaceIDExplore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C755430D2B639423000F3EDF /* Build configuration list for PBXNativeTarget "ExpenseNote" */;
+			buildConfigurationList = C755430D2B639423000F3EDF /* Build configuration list for PBXNativeTarget "FaceIDExplore" */;
 			buildPhases = (
 				C75542FB2B639421000F3EDF /* Sources */,
 				C75542FC2B639421000F3EDF /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = ExpenseNote;
+			name = FaceIDExplore;
 			productName = iExpense;
-			productReference = C75542FF2B639421000F3EDF /* ExpenseNote.app */;
+			productReference = C75542FF2B639421000F3EDF /* FaceIDExplore.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C75542FA2B639421000F3EDF /* Build configuration list for PBXProject "ExpenseNote" */;
+			buildConfigurationList = C75542FA2B639421000F3EDF /* Build configuration list for PBXProject "FaceIDExplore" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C75542FE2B639421000F3EDF /* ExpenseNote */,
+				C75542FE2B639421000F3EDF /* FaceIDExplore */,
 			);
 		};
 /* End PBXProject section */
@@ -150,7 +150,7 @@
 				C75543032B639421000F3EDF /* ExpenseNoteApp.swift in Sources */,
 				C75543132B640D85000F3EDF /* ExpenseNoteM.swift in Sources */,
 				C75543152B640DE4000F3EDF /* ExpenseNoteVM.swift in Sources */,
-				C75543112B63CC76000F3EDF /* AddView.swift in Sources */,
+				C75543112B63CC76000F3EDF /* AddExpenseNoteV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,10 +278,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ExpenseNote/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FaceIDExplore/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock Expense Note.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -292,7 +293,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = spacedrifter.xeon.ExpenseNote;
+				PRODUCT_BUNDLE_IDENTIFIER = spacedrifter.xeon.FaceIDExplore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -307,10 +308,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ExpenseNote/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FaceIDExplore/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock Expense Note.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,7 +323,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = spacedrifter.xeon.ExpenseNote;
+				PRODUCT_BUNDLE_IDENTIFIER = spacedrifter.xeon.FaceIDExplore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -332,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C75542FA2B639421000F3EDF /* Build configuration list for PBXProject "ExpenseNote" */ = {
+		C75542FA2B639421000F3EDF /* Build configuration list for PBXProject "FaceIDExplore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C755430B2B639423000F3EDF /* Debug */,
@@ -341,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C755430D2B639423000F3EDF /* Build configuration list for PBXNativeTarget "ExpenseNote" */ = {
+		C755430D2B639423000F3EDF /* Build configuration list for PBXNativeTarget "FaceIDExplore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C755430E2B639423000F3EDF /* Debug */,
