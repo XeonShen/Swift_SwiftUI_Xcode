@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1917E5302B878DB40071926F /* SinglePlayerWinV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917E52F2B878DB40071926F /* SinglePlayerWinV.swift */; };
+		1945440D2B72C05400377308 /* SpeedRecycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945440C2B72C05400377308 /* SpeedRecycleApp.swift */; };
+		1945440F2B72C05400377308 /* HomeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945440E2B72C05400377308 /* HomeV.swift */; };
+		194544112B72C05500377308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194544102B72C05500377308 /* Assets.xcassets */; };
+		194544142B72C05500377308 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194544132B72C05500377308 /* Preview Assets.xcassets */; };
+		1945441B2B72C25100377308 /* RecycleItemM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945441A2B72C25100377308 /* RecycleItemM.swift */; };
+		1945441D2B72C44500377308 /* SinglePlayerV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945441C2B72C44500377308 /* SinglePlayerV.swift */; };
+		1945441F2B72C48600377308 /* SinglePlayerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945441E2B72C48600377308 /* SinglePlayerVM.swift */; };
+		194E735D2B856B330088D1B8 /* AboutV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E735C2B856B330088D1B8 /* AboutV.swift */; };
+		19583BE72B8982AA003AC50B /* MultiPlayerV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19583BE62B8982AA003AC50B /* MultiPlayerV.swift */; };
+		19583BE92B8982EB003AC50B /* MultiPlayerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19583BE82B8982EB003AC50B /* MultiPlayerVM.swift */; };
+		197215AD2B8BF3280007AFAF /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 197215AC2B8BF3280007AFAF /* Vortex */; };
+		19BAC3002B85BC340044622C /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 19BAC2FF2B85BC340044622C /* Vortex */; };
+		19BAC3022B85DB770044622C /* AboutVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAC3012B85DB770044622C /* AboutVM.swift */; };
+		19BAC3042B867AC20044622C /* ItemsIntroV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAC3032B867AC20044622C /* ItemsIntroV.swift */; };
+		19BAC3062B867B530044622C /* ItemsIntroVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAC3052B867B530044622C /* ItemsIntroVM.swift */; };
+		19EB791B2B8AFEE900AEA5E4 /* MultiPlayerWinV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB791A2B8AFEE900AEA5E4 /* MultiPlayerWinV.swift */; };
+		19EB791D2B8B262900AEA5E4 /* GuideV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB791C2B8B262900AEA5E4 /* GuideV.swift */; };
+		19EB791F2B8B8D8500AEA5E4 /* TrashbinV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB791E2B8B8D8500AEA5E4 /* TrashbinV.swift */; };
+		19F8B5542B807846001907D5 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8B5532B807846001907D5 /* ChatBubble.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1917E52F2B878DB40071926F /* SinglePlayerWinV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerWinV.swift; sourceTree = "<group>"; };
+		194544092B72C05400377308 /* SpeedRecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedRecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1945440C2B72C05400377308 /* SpeedRecycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedRecycleApp.swift; sourceTree = "<group>"; };
+		1945440E2B72C05400377308 /* HomeV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeV.swift; sourceTree = "<group>"; };
+		194544102B72C05500377308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		194544132B72C05500377308 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1945441A2B72C25100377308 /* RecycleItemM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleItemM.swift; sourceTree = "<group>"; };
+		1945441C2B72C44500377308 /* SinglePlayerV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerV.swift; sourceTree = "<group>"; };
+		1945441E2B72C48600377308 /* SinglePlayerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerVM.swift; sourceTree = "<group>"; };
+		194E735C2B856B330088D1B8 /* AboutV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutV.swift; sourceTree = "<group>"; };
+		19583BE62B8982AA003AC50B /* MultiPlayerV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerV.swift; sourceTree = "<group>"; };
+		19583BE82B8982EB003AC50B /* MultiPlayerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerVM.swift; sourceTree = "<group>"; };
+		19BAC3012B85DB770044622C /* AboutVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVM.swift; sourceTree = "<group>"; };
+		19BAC3032B867AC20044622C /* ItemsIntroV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsIntroV.swift; sourceTree = "<group>"; };
+		19BAC3052B867B530044622C /* ItemsIntroVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsIntroVM.swift; sourceTree = "<group>"; };
+		19EB791A2B8AFEE900AEA5E4 /* MultiPlayerWinV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerWinV.swift; sourceTree = "<group>"; };
+		19EB791C2B8B262900AEA5E4 /* GuideV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideV.swift; sourceTree = "<group>"; };
+		19EB791E2B8B8D8500AEA5E4 /* TrashbinV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashbinV.swift; sourceTree = "<group>"; };
+		19F8B5532B807846001907D5 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		194544062B72C05400377308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				197215AD2B8BF3280007AFAF /* Vortex in Frameworks */,
+				19BAC3002B85BC340044622C /* Vortex in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		194544002B72C05400377308 = {
+			isa = PBXGroup;
+			children = (
+				1945440B2B72C05400377308 /* SpeedRecycle */,
+				1945440A2B72C05400377308 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1945440A2B72C05400377308 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				194544092B72C05400377308 /* SpeedRecycle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1945440B2B72C05400377308 /* SpeedRecycle */ = {
+			isa = PBXGroup;
+			children = (
+				1945440C2B72C05400377308 /* SpeedRecycleApp.swift */,
+				19EB791C2B8B262900AEA5E4 /* GuideV.swift */,
+				1945440E2B72C05400377308 /* HomeV.swift */,
+				1945441C2B72C44500377308 /* SinglePlayerV.swift */,
+				1945441E2B72C48600377308 /* SinglePlayerVM.swift */,
+				1917E52F2B878DB40071926F /* SinglePlayerWinV.swift */,
+				19583BE62B8982AA003AC50B /* MultiPlayerV.swift */,
+				19583BE82B8982EB003AC50B /* MultiPlayerVM.swift */,
+				19EB791A2B8AFEE900AEA5E4 /* MultiPlayerWinV.swift */,
+				19BAC3032B867AC20044622C /* ItemsIntroV.swift */,
+				19BAC3052B867B530044622C /* ItemsIntroVM.swift */,
+				194E735C2B856B330088D1B8 /* AboutV.swift */,
+				19BAC3012B85DB770044622C /* AboutVM.swift */,
+				19EB791E2B8B8D8500AEA5E4 /* TrashbinV.swift */,
+				19F8B5532B807846001907D5 /* ChatBubble.swift */,
+				1945441A2B72C25100377308 /* RecycleItemM.swift */,
+				194544102B72C05500377308 /* Assets.xcassets */,
+				194544122B72C05500377308 /* Preview Content */,
+			);
+			path = SpeedRecycle;
+			sourceTree = "<group>";
+		};
+		194544122B72C05500377308 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				194544132B72C05500377308 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		194544082B72C05400377308 /* SpeedRecycle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194544172B72C05500377308 /* Build configuration list for PBXNativeTarget "SpeedRecycle" */;
+			buildPhases = (
+				194544052B72C05400377308 /* Sources */,
+				194544062B72C05400377308 /* Frameworks */,
+				194544072B72C05400377308 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeedRecycle;
+			packageProductDependencies = (
+				19BAC2FF2B85BC340044622C /* Vortex */,
+				197215AC2B8BF3280007AFAF /* Vortex */,
+			);
+			productName = SpeedRecycle;
+			productReference = 194544092B72C05400377308 /* SpeedRecycle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		194544012B72C05400377308 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					194544082B72C05400377308 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 194544042B72C05400377308 /* Build configuration list for PBXProject "SpeedRecycle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 194544002B72C05400377308;
+			packageReferences = (
+				197215AB2B8BF3280007AFAF /* XCLocalSwiftPackageReference "SpeedRecyclePackageDependencies/Vortex" */,
+			);
+			productRefGroup = 1945440A2B72C05400377308 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				194544082B72C05400377308 /* SpeedRecycle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		194544072B72C05400377308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194544142B72C05500377308 /* Preview Assets.xcassets in Resources */,
+				194544112B72C05500377308 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		194544052B72C05400377308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1945440F2B72C05400377308 /* HomeV.swift in Sources */,
+				19BAC3042B867AC20044622C /* ItemsIntroV.swift in Sources */,
+				19583BE92B8982EB003AC50B /* MultiPlayerVM.swift in Sources */,
+				19EB791D2B8B262900AEA5E4 /* GuideV.swift in Sources */,
+				19F8B5542B807846001907D5 /* ChatBubble.swift in Sources */,
+				1945440D2B72C05400377308 /* SpeedRecycleApp.swift in Sources */,
+				1945441B2B72C25100377308 /* RecycleItemM.swift in Sources */,
+				1945441D2B72C44500377308 /* SinglePlayerV.swift in Sources */,
+				1917E5302B878DB40071926F /* SinglePlayerWinV.swift in Sources */,
+				19BAC3062B867B530044622C /* ItemsIntroVM.swift in Sources */,
+				1945441F2B72C48600377308 /* SinglePlayerVM.swift in Sources */,
+				19EB791F2B8B8D8500AEA5E4 /* TrashbinV.swift in Sources */,
+				19BAC3022B85DB770044622C /* AboutVM.swift in Sources */,
+				19583BE72B8982AA003AC50B /* MultiPlayerV.swift in Sources */,
+				19EB791B2B8AFEE900AEA5E4 /* MultiPlayerWinV.swift in Sources */,
+				194E735D2B856B330088D1B8 /* AboutV.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		194544152B72C05500377308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		194544162B72C05500377308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		194544182B72C05500377308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpeedRecycle/Preview Content\"";
+				DEVELOPMENT_TEAM = L5K633GAGS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = spacedrifter.xeon.SpeedRecycle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		194544192B72C05500377308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpeedRecycle/Preview Content\"";
+				DEVELOPMENT_TEAM = L5K633GAGS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = spacedrifter.xeon.SpeedRecycle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		194544042B72C05400377308 /* Build configuration list for PBXProject "SpeedRecycle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194544152B72C05500377308 /* Debug */,
+				194544162B72C05500377308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194544172B72C05500377308 /* Build configuration list for PBXNativeTarget "SpeedRecycle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194544182B72C05500377308 /* Debug */,
+				194544192B72C05500377308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		197215AB2B8BF3280007AFAF /* XCLocalSwiftPackageReference "SpeedRecyclePackageDependencies/Vortex" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SpeedRecyclePackageDependencies/Vortex;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		197215AC2B8BF3280007AFAF /* Vortex */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Vortex;
+		};
+		19BAC2FF2B85BC340044622C /* Vortex */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Vortex;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 194544012B72C05400377308 /* Project object */;
+}

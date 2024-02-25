@@ -51,7 +51,7 @@ struct EmojiArtDocumentView: View {
         return (Int(location.x), Int(location.y))
     }
     
-//MARK: - Functions - drag and drop items
+//MARK: - Functions -  drop items on the background to set
     
     private func drop(providers: [NSItemProvider], at location: CGPoint, in geometry: GeometryProxy) -> Bool {
         var found = providers.loadObjects(ofType: URL.self) { url in
