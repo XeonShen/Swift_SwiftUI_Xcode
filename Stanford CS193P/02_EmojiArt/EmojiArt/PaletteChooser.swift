@@ -10,6 +10,7 @@ struct PaletteChooser: View {
     @EnvironmentObject var store: PaletteStore
     @State private var chosenPaletteIndex = 0
     @State private var editing = false
+    @State private var managing = false
     
 //MARK: - Body
     
@@ -52,6 +53,10 @@ struct PaletteChooser: View {
         AnimatedActionButton(title: "Delete", systemImage: "minus.circle") {
             chosenPaletteIndex = store.removePalette(at: chosenPaletteIndex)
         }
+        //"Manage" Button
+        AnimatedActionButton(title: "Mange", systemImage: "slider.vertical.3") {
+            managing = true
+        }
         //"Go To" Button
         Menu {
             ForEach(store.palettes) { palette in
@@ -91,6 +96,10 @@ struct PaletteChooser: View {
         //pop up the paletteEditor window
         .popover(isPresented: $editing) {
             PaletteEditor(palette: $store.palettes[chosenPaletteIndex])
+        }
+        //pop up the paletteManager window
+        .sheet(isPresented: $managing) {
+            PaletteManager()
         }
     }
 }

@@ -71,7 +71,7 @@ class PaletteStore: ObservableObject {
 
 //MARK: - Structs - those code play the role of Model, but it appear here in the VM due to it's short
 
-struct Palette: Identifiable, Codable {
+struct Palette: Identifiable, Codable, Hashable {
     var id: Int
     var name: String
     var emojis: String
