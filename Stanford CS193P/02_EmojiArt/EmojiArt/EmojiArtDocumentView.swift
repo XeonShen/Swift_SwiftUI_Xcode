@@ -5,7 +5,6 @@ struct EmojiArtDocumentView: View {
 //MARK: - Constants and Vars
     
     @ObservedObject var document: EmojiArtDocument
-    let testEmojis = "🚗🚕🚙🚌🚎🏎️🚓🚑🚒🚐🛻🚚🚛🚜🛴🚲🛵🏍️🛺🚍🚘🚖🚡🚠"
     let defaultEmojiFontSize: CGFloat = 40
     
 //MARK: - Constants and Vars - related to pinch and pan gesture
@@ -150,38 +149,18 @@ struct EmojiArtDocumentView: View {
         }
     }
     
-    var palette: some View {
-        ScrollingEmojisView(emojis: testEmojis)
-            .font(.system(size: defaultEmojiFontSize))
-    }
+
     
 //MARK: - Body
     
     var body: some View {
         VStack(spacing: 0) {
             documentBody
-            palette
+            PaletteChooser(emojiFontSize: defaultEmojiFontSize)
         }
     }
 }
 
-//MARK: - Body Component
-
-struct ScrollingEmojisView: View {
-    let emojis: String
-
-    var body: some View {
-        ScrollView(.horizontal) {
-            HStack {
-                ForEach(emojis.map{ String($0) }, id: \.self) { emoji in
-                    Text(emoji)
-                        .onDrag{ NSItemProvider(object: emoji as NSString) }
-                }
-            }
-        }
-    }
-    
-}
 
 //MARK: - Preview
 
