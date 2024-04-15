@@ -8,7 +8,9 @@ struct PaletteChooser: View {
     var emojiFont: Font { .system(size: emojiFontSize) }
     
     @EnvironmentObject var store: PaletteStore
-    @State private var chosenPaletteIndex = 0
+    
+    //use @SceneStorage wrapper instead of @State, so this var will be stored even if App crash
+    @SceneStorage("PaletteChooser.chosenPaletteIndex") private var chosenPaletteIndex = 0
     @State private var editing = false
     @State private var managing = false
     

@@ -6,17 +6,18 @@ struct EmojiArtDocumentView: View {
     
     @ObservedObject var document: EmojiArtDocument
     @State private var alertToShow: IdentifiableAlert?
-    let defaultEmojiFontSize: CGFloat = 40
+    @State private var autoZoomIn = false
+    @ScaledMetric var defaultEmojiFontSize: CGFloat = 40
     
 //MARK: - Constants and Vars - related to pinch and pan gesture
     
-    @State private var steadyStateZoomScale: CGFloat = 1
+    @SceneStorage("EmojiArtDocumentView.steadyStateZoomScale") private var steadyStateZoomScale: CGFloat = 1
     @GestureState private var gestureZoomScale: CGFloat = 1
     private var zoomScale: CGFloat {
         steadyStateZoomScale * gestureZoomScale
     }
     
-    @State private var steadyStatePanOffset: CGSize = CGSize.zero
+    @SceneStorage("EmojiArtDocumentView.steadyStatePanOffset") private var steadyStatePanOffset: CGSize = CGSize.zero
     @GestureState private var gesturePanOffset: CGSize = CGSize.zero
     private var panOffset: CGSize {
         (steadyStatePanOffset + gesturePanOffset) * zoomScale
@@ -55,11 +56,13 @@ struct EmojiArtDocumentView: View {
     
     private func drop(providers: [NSItemProvider], at location: CGPoint, in geometry: GeometryProxy) -> Bool {
         var found = providers.loadObjects(ofType: URL.self) { url in
+            autoZoomIn = true
             document.setBackground(EmojiArtModel.Background.url(url.imageURL))
         }
         if !found {
             found = providers.loadObjects(ofType: UIImage.self) { image in
                 if let data = image.jpegData(compressionQuality: 1.0) {
+                    autoZoomIn = true
                     document.setBackground(.imageData(data))
                 }
             }
@@ -165,7 +168,9 @@ struct EmojiArtDocumentView: View {
             
             //subscribe to the $backgroundImage publisher, auto zoom in image when receive updates
             .onReceive(document.$backgroundImage) { image in
-                zoomToFit(image, in: geometry.size)
+                if autoZoomIn {
+                    zoomToFit(image, in: geometry.size)
+                }
             }
             
             //monitor the fetch status, if failed, pop up alert window
