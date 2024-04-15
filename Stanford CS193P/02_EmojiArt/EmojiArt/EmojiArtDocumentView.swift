@@ -163,6 +163,11 @@ struct EmojiArtDocumentView: View {
             //make 2 gesture detected at the same time
             .gesture(panGesture().simultaneously(with: zoomGesture()))
             
+            //subscribe to the $backgroundImage publisher, auto zoom in image when receive updates
+            .onReceive(document.$backgroundImage) { image in
+                zoomToFit(image, in: geometry.size)
+            }
+            
             //monitor the fetch status, if failed, pop up alert window
             .onChange(of: document.backgroundImageFetchStatus) { status in
                 switch status {
