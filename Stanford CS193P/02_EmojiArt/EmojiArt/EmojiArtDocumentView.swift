@@ -5,6 +5,7 @@ struct EmojiArtDocumentView: View {
 //MARK: - Constants and Vars
     
     @ObservedObject var document: EmojiArtDocument
+    @State private var alertToShow: IdentifiableAlert?
     let defaultEmojiFontSize: CGFloat = 40
     
 //MARK: - Constants and Vars - related to pinch and pan gesture
@@ -119,6 +120,15 @@ struct EmojiArtDocumentView: View {
             }
     }
     
+//MARK: - Body
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            documentBody
+            PaletteChooser(emojiFontSize: defaultEmojiFontSize)
+        }
+    }
+    
 //MARK: - Body Components
     
     var documentBody: some View {
@@ -141,26 +151,38 @@ struct EmojiArtDocumentView: View {
                     }
                 }
             }
+            
+            //limit the view in it's frame
             .clipped()
+            
+            //define drop gesture
             .onDrop(of: [.plainText, .url, .image], isTargeted: nil) { providers, location in
                 return drop(providers: providers, at: location, in: geometry)
             }
+            
+            //make 2 gesture detected at the same time
             .gesture(panGesture().simultaneously(with: zoomGesture()))
-        }
-    }
-    
-
-    
-//MARK: - Body
-    
-    var body: some View {
-        VStack(spacing: 0) {
-            documentBody
-            PaletteChooser(emojiFontSize: defaultEmojiFontSize)
+            
+            //monitor the fetch status, if failed, pop up alert window
+            .onChange(of: document.backgroundImageFetchStatus) { status in
+                switch status {
+                case .failed(let url):
+                    alertToShow = IdentifiableAlert(id: "fetch failed: " + url.absoluteString, alert: {
+                        Alert(title: Text("Background Image Fetch"),
+                              message: Text("Couldn't load image from \(url)."),
+                              dismissButton: .default(Text("OK"))
+                        )
+                    })
+                default:
+                    break
+                }
+            }
+            .alert(item: $alertToShow) { alertToShow in
+                alertToShow.alert()
+            }
         }
     }
 }
-
 
 //MARK: - Preview
 
