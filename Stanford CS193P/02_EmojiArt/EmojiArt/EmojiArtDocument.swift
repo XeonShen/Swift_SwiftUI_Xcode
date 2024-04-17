@@ -74,7 +74,7 @@ class EmojiArtDocument: ReferenceFileDocument {
         }
     }
     
-//MARK: - Newer Data Persistence - conform to ReferenceFileDocument so data can be R&W
+//MARK: - Newer Data Persistence - conform to ReferenceFileDocument so data can be R & W
     
     static var readableContentTypes = [UTType.emojiart]
     static var writeableContentTypes = [UTType.emojiart]

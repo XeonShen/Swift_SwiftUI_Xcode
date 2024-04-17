@@ -194,6 +194,14 @@ struct EmojiArtDocumentView: View {
             .alert(item: $alertToShow) { alertToShow in
                 alertToShow.alert()
             }
+            
+            //add undo & redo button
+            .toolbar {
+                UndoButton(
+                    undo: undoManager?.optionalUndoMenuItemTitle,
+                    redo: undoManager?.optionalRedoMenuItemTitle
+                )
+            }
         }
     }
 }

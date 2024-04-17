@@ -32,8 +32,9 @@ struct PaletteEditor: View {
             TextField("", text: $emojiToAdd)
                 .onChange(of: emojiToAdd) { emoji in
                     withAnimation {
-                        palette.emojis = emoji + palette.emojis
+                        palette.emojis = (emoji + palette.emojis)
                             .filter { $0.isEmoji }
+                            .removingDuplicateCharacters
                     }
                 }
         }
@@ -41,7 +42,7 @@ struct PaletteEditor: View {
     
     var removeEmojiSection: some View {
         Section(header: Text("Remove Emoji")) {
-            let emojis = palette.emojis.map { String($0) }
+            let emojis = palette.emojis.removingDuplicateCharacters.map { String($0) }
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
                 ForEach(emojis, id: \.self) { emoji in
                     Text(emoji)
