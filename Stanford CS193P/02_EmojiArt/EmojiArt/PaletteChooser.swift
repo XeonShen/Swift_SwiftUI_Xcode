@@ -11,7 +11,7 @@ struct PaletteChooser: View {
     
     //use @SceneStorage wrapper instead of @State, so this var will be stored even if App crash
     @SceneStorage("PaletteChooser.chosenPaletteIndex") private var chosenPaletteIndex = 0
-    @State private var editing = false
+    @State private var paletteToEdit: Palette?
     @State private var managing = false
     
 //MARK: - Body
@@ -44,12 +44,12 @@ struct PaletteChooser: View {
     var contextMenu: some View {
         //"Edit" Button
         AnimatedActionButton(title: "Edit", systemImage: "pencil") {
-            editing = true
+            paletteToEdit = store.palette(at: chosenPaletteIndex)
         }
         //"New" Button
         AnimatedActionButton(title: "New", systemImage: "plus") {
             store.insertPalette(named: "New", emojis: "", at: chosenPaletteIndex)
-            editing = true
+            paletteToEdit = store.palette(at: chosenPaletteIndex)
         }
         //"Delete" Button
         AnimatedActionButton(title: "Delete", systemImage: "minus.circle") {
@@ -96,8 +96,9 @@ struct PaletteChooser: View {
         )
         .id(palette.id)
         //pop up the paletteEditor window
-        .popover(isPresented: $editing) {
-            PaletteEditor(palette: $store.palettes[chosenPaletteIndex])
+        .popover(item: $paletteToEdit) { palette in
+            PaletteEditor(palette: $store.palettes[palette])
+                .wrappedInNavigationViewToMakeDismissable { paletteToEdit = nil }
         }
         //pop up the paletteManager window
         .sheet(isPresented: $managing) {

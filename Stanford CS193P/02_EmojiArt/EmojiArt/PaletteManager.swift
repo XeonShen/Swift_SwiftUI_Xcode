@@ -33,19 +33,12 @@ struct PaletteManager: View {
             //navigation title settings
             .navigationTitle("Manage Palettes")
             .navigationBarTitleDisplayMode(.inline)
-            //tap EditButton to enter editMode, delete and move button will appear
-            //Close button will only shown under presentationMode, and devices other than iPad
+            //add EditButton for entering editMode, Delete and Move button will appear under this mode
             .toolbar {
                 ToolbarItem { EditButton() }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    if presentationMode.wrappedValue.isPresented,
-                       UIDevice.current.userInterfaceIdiom != .pad {
-                        Button("Close") {
-                            presentationMode.wrappedValue.dismiss()
-                        }
-                    }
-                }
             }
+            //add a dismiss button for closing the window
+            .dismissable { presentationMode.wrappedValue.dismiss() }
             .environment(\.editMode, $editMode)
         }
     }

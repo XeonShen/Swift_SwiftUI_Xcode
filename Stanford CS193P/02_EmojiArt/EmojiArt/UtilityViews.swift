@@ -119,3 +119,36 @@ extension UndoManager {
         canRedo ? redoMenuItemTitle : nil
     }
 }
+
+//wrap a view inside a NavigationView, then add a dismiss button to it
+//dismiss button will only shown on devices other than iPad
+extension View {
+    @ViewBuilder
+    func wrappedInNavigationViewToMakeDismissable(_ dismiss: (() -> Void)?) -> some View {
+        if UIDevice.current.userInterfaceIdiom != .pad, let dismiss = dismiss {
+            NavigationView {
+                self
+                    .navigationBarTitleDisplayMode(.inline)
+                    .dismissable(dismiss)
+            }
+            //stack the views all on top of each other, never do a side-by-side presentation
+            .navigationViewStyle(StackNavigationViewStyle())
+        } else {
+            self
+        }
+    }
+    
+    @ViewBuilder
+    func dismissable(_ dismiss: (() -> Void)?) -> some View {
+        if UIDevice.current.userInterfaceIdiom != .pad, let dismiss = dismiss {
+            self
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Close") { dismiss() }
+                }
+            }
+        } else {
+            self
+        }
+    }
+}
