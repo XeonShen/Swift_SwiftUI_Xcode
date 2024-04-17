@@ -5,6 +5,8 @@ struct EmojiArtDocumentView: View {
 //MARK: - Constants and Vars
     
     @ObservedObject var document: EmojiArtDocument
+    @Environment(\.undoManager) var undoManager
+    
     @State private var alertToShow: IdentifiableAlert?
     @State private var autoZoomIn = false
     @ScaledMetric var defaultEmojiFontSize: CGFloat = 40
@@ -57,13 +59,13 @@ struct EmojiArtDocumentView: View {
     private func drop(providers: [NSItemProvider], at location: CGPoint, in geometry: GeometryProxy) -> Bool {
         var found = providers.loadObjects(ofType: URL.self) { url in
             autoZoomIn = true
-            document.setBackground(EmojiArtModel.Background.url(url.imageURL))
+            document.setBackground(EmojiArtModel.Background.url(url.imageURL), undoManager: undoManager) //enable undo
         }
         if !found {
             found = providers.loadObjects(ofType: UIImage.self) { image in
                 if let data = image.jpegData(compressionQuality: 1.0) {
                     autoZoomIn = true
-                    document.setBackground(.imageData(data))
+                    document.setBackground(.imageData(data), undoManager: undoManager) //enable undo
                 }
             }
         }
@@ -71,8 +73,10 @@ struct EmojiArtDocumentView: View {
             found = providers.loadObjects(ofType: String.self) { string in
                 if let emoji = string.first, emoji.isEmoji {
                     document.addEmoji(String(emoji),
-                                      at: convertToEmojiCoordinates(location, in:geometry),
-                                      size: defaultEmojiFontSize / zoomScale)
+                                      at: convertToEmojiCoordinates(location, in: geometry),
+                                      size: defaultEmojiFontSize / zoomScale,
+                                      undoManager: undoManager //enable undo
+                    )
                 }
             }
         }
