@@ -62,6 +62,23 @@ struct AnimatedActionButton: View {
 struct IdentifiableAlert: Identifiable {
     var id: String
     var alert: () -> Alert
+    
+    init(id: String, alert: @escaping () -> Alert) {
+        self.id = id
+        self.alert = alert
+    }
+    
+    // L15 convenience init added between L14 and L15
+    init(id: String, title: String, message: String) {
+        self.id = id
+        alert = { Alert(title: Text(title), message: Text(message), dismissButton: .default(Text("OK"))) }
+    }
+    
+    // L15 convenience init added between L14 and L15
+    init(title: String, message: String) {
+        self.id = title + message
+        alert = { Alert(title: Text(title), message: Text(message), dismissButton: .default(Text("OK"))) }
+    }
 }
 
 // a button that does undo (preferred) or redo
@@ -120,6 +137,8 @@ extension UndoManager {
     }
 }
 
+//MARK: - Put 3 Buttons in toolbar
+
 //wrap a view inside a NavigationView, then add a dismiss button to it
 //dismiss button will only shown on devices other than iPad
 extension View {
@@ -150,5 +169,39 @@ extension View {
         } else {
             self
         }
+    }
+}
+
+//MARK: - Change the show up way of these 3 Buttons
+
+//create a ViewModifier based on toolbar, the layout of items inside change automatically to suit the compact & regular mode
+struct CompactableIntoContextMenu: ViewModifier {
+    //check whether the current status is compact or not
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    var compact: Bool { horizontalSizeClass == .compact }
+    
+    func body(content: Content) -> some View {
+        if compact {
+            Button {
+                
+            } label: {
+                Image(systemName: "ellipsis.circle")
+            }
+            .contextMenu {
+                content
+            }
+        } else {
+            content
+        }
+    }
+}
+
+//add the above ViewModifier to View extension
+extension View {
+    func compactableToolbar<Content>(@ViewBuilder content: () -> Content) -> some View where Content: View {
+        self
+            .toolbar {
+                content().modifier(CompactableIntoContextMenu())
+            }
     }
 }

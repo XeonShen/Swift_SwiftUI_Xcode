@@ -195,12 +195,35 @@ struct EmojiArtDocumentView: View {
                 alertToShow.alert()
             }
             
-            //add undo & redo button
-            .toolbar {
-                UndoButton(
-                    undo: undoManager?.optionalUndoMenuItemTitle,
-                    redo: undoManager?.optionalRedoMenuItemTitle
-                )
+            //add undo & redo button, add paste button for image pasteing
+            .compactableToolbar {
+                if let undoManager = undoManager {
+                    //undo button
+                    if undoManager.canUndo {
+                        AnimatedActionButton(title: undoManager.undoActionName, systemImage: "arrow.uturn.backward") {
+                            undoManager.undo()
+                        }
+                    }
+                    //redo button
+                    if undoManager.canRedo {
+                        AnimatedActionButton(title: undoManager.redoActionName, systemImage: "arrow.uturn.forward") {
+                            undoManager.redo()
+                        }
+                    }
+                }
+                //paste button
+                AnimatedActionButton(title: "Paste Background", systemImage: "doc.on.clipboard") {
+                    if let imageData = UIPasteboard.general.image?.jpegData(compressionQuality: 1.0) {
+                        document.setBackground(.imageData(imageData), undoManager: undoManager)
+                    } else if let url = UIPasteboard.general.url?.imageURL {
+                        document.setBackground(.url(url), undoManager: undoManager)
+                    } else {
+                        alertToShow = IdentifiableAlert(
+                            title: "Paste Background",
+                            message: "There is no image currently on the background."
+                        )
+                    }
+                }
             }
         }
     }
