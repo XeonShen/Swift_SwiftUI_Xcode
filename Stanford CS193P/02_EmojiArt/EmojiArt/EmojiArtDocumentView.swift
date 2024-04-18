@@ -11,6 +11,13 @@ struct EmojiArtDocumentView: View {
     @State private var autoZoomIn = false
     @ScaledMetric var defaultEmojiFontSize: CGFloat = 40
     
+    enum BackgroundPickerType: String, Identifiable {
+        var id: String { rawValue }
+        case camera
+        case library
+    }
+    @State private var backgroundPicker: BackgroundPickerType?
+    
 //MARK: - Constants and Vars - related to pinch and pan gesture
     
     @SceneStorage("EmojiArtDocumentView.steadyStateZoomScale") private var steadyStateZoomScale: CGFloat = 1
@@ -127,6 +134,20 @@ struct EmojiArtDocumentView: View {
             }
     }
     
+    
+//MARK: - Function - handle the image
+    
+    private func handlePickedBackgroundImage(_ image: UIImage?) {
+        //enable auto zoom
+        autoZoomIn = true
+        //set the image
+        if let imageData = image?.jpegData(compressionQuality: 1.0) {
+            document.setBackground(.imageData(imageData), undoManager: undoManager)
+        }
+        //let the sheet go away
+        backgroundPicker = nil
+    }
+    
 //MARK: - Body
     
     var body: some View {
@@ -141,11 +162,10 @@ struct EmojiArtDocumentView: View {
     var documentBody: some View {
         GeometryReader { geometry in
             ZStack{
-                Color.white.overlay(
-                    OptionalImage(uiImage: document.backgroundImage)
-                        .scaleEffect(zoomScale)
-                        .position(convertFromEmojiCoordinates((0, 0), in: geometry))
-                )
+                Color.white
+                OptionalImage(uiImage: document.backgroundImage)
+                    .scaleEffect(zoomScale)
+                    .position(convertFromEmojiCoordinates((0, 0), in: geometry))
                 .gesture(doubleTapToZoom(in: geometry.size))
                 if document.backgroundImageFetchStatus == .fetching {
                     ProgressView().scaleEffect(2)
@@ -211,8 +231,10 @@ struct EmojiArtDocumentView: View {
                         }
                     }
                 }
+                
                 //paste button
                 AnimatedActionButton(title: "Paste Background", systemImage: "doc.on.clipboard") {
+                    autoZoomIn = true
                     if let imageData = UIPasteboard.general.image?.jpegData(compressionQuality: 1.0) {
                         document.setBackground(.imageData(imageData), undoManager: undoManager)
                     } else if let url = UIPasteboard.general.url?.imageURL {
@@ -224,6 +246,22 @@ struct EmojiArtDocumentView: View {
                         )
                     }
                 }
+                
+                //camera button
+                if Camera.isAvailable {
+                    AnimatedActionButton(title: "Camera", systemImage: "camera") {
+                        backgroundPicker = .camera
+                    }
+                }
+            }
+            
+            //pop up the camera page
+            .sheet(item: $backgroundPicker) { pickerType in
+                switch pickerType {
+                case .camera: Camera(handlePickedImage: { image in handlePickedBackgroundImage(image) })
+                case .library: EmptyView()
+                }
+                
             }
         }
     }
