@@ -246,10 +246,16 @@ struct EmojiArtDocumentView: View {
                         )
                     }
                 }
+                //photo library button
+                if PhotoLibrary.isAvailable {
+                    AnimatedActionButton(title: "Search Photos", systemImage: "photo") {
+                        backgroundPicker = .library
+                    }
+                }
                 
                 //camera button
                 if Camera.isAvailable {
-                    AnimatedActionButton(title: "Camera", systemImage: "camera") {
+                    AnimatedActionButton(title: "Take Photo", systemImage: "camera") {
                         backgroundPicker = .camera
                     }
                 }
@@ -259,7 +265,7 @@ struct EmojiArtDocumentView: View {
             .sheet(item: $backgroundPicker) { pickerType in
                 switch pickerType {
                 case .camera: Camera(handlePickedImage: { image in handlePickedBackgroundImage(image) })
-                case .library: EmptyView()
+                case .library: PhotoLibrary(handlePickedImage: { image in handlePickedBackgroundImage(image) })
                 }
                 
             }

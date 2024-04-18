@@ -19,6 +19,7 @@
 		C78DADDD2BCB5FD2005F2D2F /* PaletteChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DADDC2BCB5FD2005F2D2F /* PaletteChooser.swift */; };
 		C7B760412B590D3000B90177 /* PaletteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B760402B590D3000B90177 /* PaletteStore.swift */; };
 		C7C57BD02BD0F11A00F544A9 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C57BCF2BD0F11A00F544A9 /* Camera.swift */; };
+		C7C57BD22BD16D3200F544A9 /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C57BD12BD16D3200F544A9 /* PhotoLibrary.swift */; };
 		C7DD68922BCD084A00A932D9 /* PaletteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD68912BCD084A00A932D9 /* PaletteEditor.swift */; };
 		C7DD68942BCD1B9000A932D9 /* PaletteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD68932BCD1B9000A932D9 /* PaletteManager.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		C78DADDC2BCB5FD2005F2D2F /* PaletteChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteChooser.swift; sourceTree = "<group>"; };
 		C7B760402B590D3000B90177 /* PaletteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteStore.swift; sourceTree = "<group>"; };
 		C7C57BCF2BD0F11A00F544A9 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		C7C57BD12BD16D3200F544A9 /* PhotoLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
 		C7DD68912BCD084A00A932D9 /* PaletteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditor.swift; sourceTree = "<group>"; };
 		C7DD68932BCD1B9000A932D9 /* PaletteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteManager.swift; sourceTree = "<group>"; };
 		C7F404BB2BCF2B6000AC5AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				C7DD68932BCD1B9000A932D9 /* PaletteManager.swift */,
 				C7B760402B590D3000B90177 /* PaletteStore.swift */,
 				C7C57BCF2BD0F11A00F544A9 /* Camera.swift */,
+				C7C57BD12BD16D3200F544A9 /* PhotoLibrary.swift */,
 				C77926F32B54E1A8005E5CEB /* UtilityExtensions.swift */,
 				C77926F42B54E1A8005E5CEB /* UtilityViews.swift */,
 				C77926E32B54D7C7005E5CEB /* Assets.xcassets */,
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C77926F62B54E1A8005E5CEB /* UtilityViews.swift in Sources */,
+				C7C57BD22BD16D3200F544A9 /* PhotoLibrary.swift in Sources */,
 				C7DD68942BCD1B9000A932D9 /* PaletteManager.swift in Sources */,
 				C7B760412B590D3000B90177 /* PaletteStore.swift in Sources */,
 				C7DD68922BCD084A00A932D9 /* PaletteEditor.swift in Sources */,
